@@ -1,3 +1,4 @@
+// 6410402104 พิชญา เสนา
 package ku.atm;
 
 import io.cucumber.java.Before;
@@ -69,5 +70,11 @@ public class StepDefATM {
         assertEquals(balance,
                      bank.getCustomer(id).getAccount().getBalance());
     }
+
+    @When("I deposit {float} from ATM")
+    public void i_deposit_from_atm(double amount){
+        atm.deposit(amount);
+    }
+
 
 }
